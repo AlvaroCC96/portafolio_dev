@@ -1,0 +1,21 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-900 font-sans; /* font-sans aplicará 'Inter' según el config */
+}
+
+.tech-carousel .swiper-pagination-bullet {
+  background-color: #a855f7;
+  opacity: 0.5;
+}
+
+.tech-carousel .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.Typewriter__cursor {
+  @apply text-purple-400;
+}
