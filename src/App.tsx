@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Github, Linkedin, Mail, Code2, Database, Globe, Cpu, Blocks, Cloud, Terminal, Palette } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
+import emailjs from '@emailjs/browser';
 import { TypewriterHeader } from './components/TypewriterHeader';
 import { TechCard } from './components/TechCard';
 import { ExperienceCard } from './components/ExperienceCard';
@@ -9,15 +10,19 @@ import { SocialLink } from './components/SocialLink';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import Imagen from './assets/profile.png';
 
 function App() {
-
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',   // Cambiado a from_name
+    from_email: '',  // Cambiado a from_email
     message: ''
   });
+  const [status, setStatus] = useState({
+    message: '',
+    type: ''
+  });
+  const [loading, setLoading] = useState(false);
+  const form = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,13 +32,33 @@ function App() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, message } = formData;
-    const mailtoLink = `mailto:alvarolucascc96@gmail.com?subject=Formulario de contacto de ${name}&body=${message}`;
-    window.location.href = mailtoLink;
-  };
+    setLoading(true);
+    setStatus({ message: '', type: '' });
 
+    try {
+      await emailjs.sendForm(
+        'service_7icpweg', // Reemplaza con tu ID de servicio de EmailJS
+        'template_qm7j5dl', // Reemplaza con tu ID de plantilla de EmailJS
+        form.current,
+        'kSBrrpB89qNnrrClL' // Reemplaza con tu clave pública de EmailJS
+      );
+
+      setStatus({
+        message: 'Message sent successfully!',
+        type: 'success'
+      });
+      setFormData({ from_name: '', from_email: '', message: '' });
+    } catch (error) {
+      setStatus({
+        message: 'Failed to send message. Please try again.',
+        type: 'error'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const technologies = [
     { icon: <Database size={40} />, title: "Backend", items: ["Laravel", "Python", "MySQL", "BigQuery", "OracleSQL"] },
@@ -64,10 +89,10 @@ function App() {
               <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
                 About Me
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed">
-              I am a proactive professional with +4 years of experience in software development, infrastructure management, and technological solutions.
-              My goal is to contribute my knowledge and skills while continuing my professional growth and learning new technologies. 
-              I have experience in web application development, DevOps, and managing collaboration tools like Git and Jira.
+              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                I am a proactive professional with +4 years of experience in software development, infrastructure management, and technological solutions.
+                My goal is to contribute my knowledge and skills while continuing my professional growth and learning new technologies. 
+                I have experience in web application development, DevOps, and managing collaboration tools like Git and Jira.
               </p>
             </div>
           </div>
@@ -163,26 +188,28 @@ function App() {
           <div className="max-w-2xl mx-auto">
             <div className="flex justify-center space-x-8 mb-12">
               <SocialLink href="https://www.linkedin.com/in/alvarocc96" icon={<Linkedin />} label="LinkedIn" />
-              <SocialLink href="mailto:alvarolucascc96@gmail.com" icon={<Mail />} label="Email" />
+              <SocialLink href="https://github.com/AlvaroCC96" icon={<Github />} label="GitHub" />
             </div>
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <input
                   type="text"
-                  name="name"
+                  name="from_name"  // Cambiado a from_name
                   placeholder="Your Name"
-                  value={formData.name}
+                  value={formData.from_name}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-500/10 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-white/70"
                 />
               </div>
               <div>
                 <input
                   type="email"
-                  name="email"
+                  name="from_email"  // Cambiado a from_email
                   placeholder="Your Email"
-                  value={formData.email}
+                  value={formData.from_email}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-500/10 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-white/70"
                 />
               </div>
@@ -193,12 +220,22 @@ function App() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
+                  required
                   className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-500/10 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-white/70"
                 ></textarea>
               </div>
-              <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition duration-300">
-                Send Message
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? 'Sending...' : 'Send Message'}
               </button>
+              {status.message && (
+                <div className={`text-center p-3 rounded-lg ${status.type === 'success' ? 'bg-green-500/20 text-green-300' : 'bg-red-500/20 text-red-300'}`}>
+                  {status.message}
+                </div>
+              )}
             </form>
           </div>
         </div>
