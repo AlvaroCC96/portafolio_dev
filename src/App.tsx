@@ -124,7 +124,7 @@ function App() {
               using technologies like Laravel, Python, React.js, Oracle SQL, and MySQL.'
             />
             <ExperienceCard
-              position="Fullstack Developer"
+              position="Software Architect"
               company="RedCapital"
               date="2023 - 2024"
               description="Automate and build integrations with services such as SUNAT (Peru), CAVALI (Peru), DICOM, General Treasury of the Republic, Judicial Power, and the Internal Revenue Service of Chile. 
