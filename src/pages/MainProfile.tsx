@@ -38,12 +38,12 @@ function MainProfile() {
     setStatus({ message: '', type: '' });
 
     try {
-      await emailjs.sendForm(
-        'service_7icpweg', // Reemplaza con tu ID de servicio de EmailJS
-        'template_qm7j5dl', // Reemplaza con tu ID de plantilla de EmailJS
-        form.current,
-        'kSBrrpB89qNnrrClL' // Reemplaza con tu clave pública de EmailJS
-      );
+        await emailjs.sendForm(
+            'service_7icpweg', // Reemplaza con tu ID de servicio de EmailJS
+            'template_qm7j5dl', // Reemplaza con tu ID de plantilla de EmailJS
+            form.current,
+            'kSBrrpB89qNnrrClL' // Reemplaza con tu clave pública de EmailJS
+        );
 
       setStatus({
         message: 'Message sent successfully!',
@@ -61,13 +61,41 @@ function MainProfile() {
   };
 
   const technologies = [
-    { icon: <Database size={40} />, title: "Backend", items: ["Laravel", "Python", "MySQL", "BigQuery", "OracleSQL"] },
-    { icon: <Code2 size={40} />, title: "Frontend", items: ["React", "Jquery", "CSS", "HTML"] },
-    { icon: <Terminal size={40} />, title: "DevOps", items: ["CI/CD", "Docker", "Jenkins" , "Terraform"] },
-    { icon: <Cpu size={40} />, title: "Tools", items: ["Git", "Jira", "Postman" ] },
-    { icon: <Globe size={40} />, title: "Web", items: ["REST APIs", "Testing" , "WebScraping"] },    
-    { icon: <Cloud size={40} />, title: "Cloud", items: ["AWS", "GCP"] },
-    { icon: <Palette size={40} />, title: "Design", items: ["Figma"] },
+    { 
+      icon: <Database size={40} />, 
+      title: "Backend", 
+      items: ["Laravel", "Python", "MySQL", "BigQuery", "OracleSQL"] 
+    },
+    { 
+      icon: <Code2 size={40} />, 
+      title: "Frontend", 
+      items: ["React", "jQuery", "CSS", "HTML"] 
+    },
+    { 
+      icon: <Terminal size={40} />, 
+      title: "DevOps", 
+      items: ["CI/CD", "Docker", "Jenkins", "Terraform"] 
+    },
+    { 
+      icon: <Cpu size={40} />, 
+      title: "Tools", 
+      items: ["Git", "Jira", "Postman", "VSCode"] 
+    },
+    { 
+      icon: <Globe size={40} />, 
+      title: "Web", 
+      items: ["REST APIs", "Testing", "WebScraping"] 
+    },    
+    { 
+      icon: <Cloud size={40} />, 
+      title: "Cloud", 
+      items: ["AWS", "GCP"] 
+    },
+    { 
+      icon: <Palette size={40} />, 
+      title: "Design", 
+      items: ["Figma"] 
+    },
   ];
 
   return (
@@ -194,7 +222,7 @@ function MainProfile() {
               <div>
                 <input
                   type="text"
-                  name="from_name"  // Cambiado a from_name
+                  name="from_name"
                   placeholder="Your Name"
                   value={formData.from_name}
                   onChange={handleChange}
@@ -205,7 +233,7 @@ function MainProfile() {
               <div>
                 <input
                   type="email"
-                  name="from_email"  // Cambiado a from_email
+                  name="from_email"
                   placeholder="Your Email"
                   value={formData.from_email}
                   onChange={handleChange}

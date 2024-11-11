@@ -45,7 +45,8 @@ Design:
 - Figma`;
 
   const contact = `GitHub: https://github.com/AlvaroCC96
-LinkedIn: https://www.linkedin.com/in/alvarocc96`;
+LinkedIn: https://www.linkedin.com/in/alvarocc96
+E-mail: alvarolucascc96@gmail.com`;
 
   const help = `Available commands:
 /help - Show this help message
