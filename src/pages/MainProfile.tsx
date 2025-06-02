@@ -227,7 +227,7 @@ function MainProfile() {
                   value={formData.from_name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-white/70"
+                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-black placeholder-gray-600"
                 />
               </div>
               <div>
@@ -238,7 +238,7 @@ function MainProfile() {
                   value={formData.from_email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-white/70"
+                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-black placeholder-gray-600"
                 />
               </div>
               <div>
@@ -249,7 +249,7 @@ function MainProfile() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-white/70"
+                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-black placeholder-gray-600"
                 ></textarea>
               </div>
               <button
