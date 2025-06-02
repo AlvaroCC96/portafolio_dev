@@ -5,12 +5,12 @@ import { Terminal } from 'lucide-react';
 
 export function TypewriterHeader() {
   return (
-    <header className="bg-gradient-to-r from-purple-900 to-indigo-900">
+    <header className="bg-gradient-to-r from-primary to-accent">
       {/* Developer Mode Button Container */}
       <div className="container mx-auto px-4 py-3 flex justify-end">
         <Link 
           to="/dev" 
-          className="px-4 py-2 bg-gray-800 text-gray-200 rounded-lg flex items-center gap-2 hover:bg-gray-700 transition-colors shadow-lg hover:shadow-xl"
+          className="px-4 py-2 bg-secondary text-gray-200 rounded-lg flex items-center gap-2 hover:bg-secondary/80 transition-colors shadow-lg hover:shadow-xl"
         >
           <Terminal size={18} />
           <span className="text-sm md:text-base">Developer Mode</span>
@@ -19,7 +19,7 @@ export function TypewriterHeader() {
 
       {/* Title and Typewriter Container */}
       <div className="container mx-auto px-4 text-center py-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-secondary to-white">
           Álvaro Lucas Castillo Calabacero
         </h1>
         <div className="text-xl text-gray-300 h-8">

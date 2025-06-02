@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-900 font-sans; /* font-sans aplicará 'Inter' según el config */
+  @apply bg-secondary font-sans;
 }
 
 .tech-carousel .swiper-pagination-bullet {
-  background-color: #a855f7;
+  background-color: #e07f3f;
   opacity: 0.5;
 }
 
@@ -17,5 +17,5 @@ body {
 }
 
 .Typewriter__cursor {
-  @apply text-purple-400;
+  @apply text-primary;
 }

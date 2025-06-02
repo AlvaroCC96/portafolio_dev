@@ -4,8 +4,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'], // Define 'Inter' como la fuente principal
+        sans: ['Inter', 'sans-serif'],
       },
+      colors: {
+        primary: '#e07f3f',
+        secondary: '#0d3745',
+        accent: '#84341c',
+      }
     },
   },
   plugins: [],

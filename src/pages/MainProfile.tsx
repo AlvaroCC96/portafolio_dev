@@ -13,8 +13,8 @@ import 'swiper/css/autoplay';
 
 function MainProfile() {
   const [formData, setFormData] = useState({
-    from_name: '',   // Cambiado a from_name
-    from_email: '',  // Cambiado a from_email
+    from_name: '',
+    from_email: '',
     message: ''
   });
   const [status, setStatus] = useState({
@@ -39,10 +39,10 @@ function MainProfile() {
 
     try {
         await emailjs.sendForm(
-            'service_7icpweg', // Reemplaza con tu ID de servicio de EmailJS
-            'template_qm7j5dl', // Reemplaza con tu ID de plantilla de EmailJS
+            'service_7icpweg',
+            'template_qm7j5dl',
             form.current,
-            'kSBrrpB89qNnrrClL' // Reemplaza con tu clave pública de EmailJS
+            'kSBrrpB89qNnrrClL'
         );
 
       setStatus({
@@ -99,22 +99,22 @@ function MainProfile() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen bg-secondary text-gray-100">
       <TypewriterHeader />
 
       {/* About Me Section */}
-      <section className="py-10 bg-gradient-to-br from-purple-900/20 to-indigo-900/20">
+      <section className="py-10 bg-gradient-to-br from-primary/20 to-accent/20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="w-48 h-48 flex-shrink-0">
               <img
                 src="https://i.ibb.co/mbxCBxY/b859906f-31bc-4ad4-8b28-cbcc99096239.png"
                 alt="Profile"
-                className="w-full h-full rounded-full object-cover shadow-lg ring-4 ring-purple-500/50"
+                className="w-full h-full rounded-full object-cover shadow-lg ring-4 ring-primary/50"
               />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+              <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
                 About Me
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
@@ -128,9 +128,9 @@ function MainProfile() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-10 bg-gradient-to-br from-indigo-900/20 to-purple-900/20">
+      <section className="py-10 bg-gradient-to-br from-accent/20 to-primary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             Technologies
           </h2>
           <Swiper
@@ -156,9 +156,9 @@ function MainProfile() {
       </section>
 
       {/* Experience Section */}
-      <section className="py-10 bg-gradient-to-br from-purple-900/20 to-indigo-900/20">
+      <section className="py-10 bg-gradient-to-br from-primary/20 to-accent/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             Professional Experience
           </h2>
           <div className="space-y-12">
@@ -208,9 +208,9 @@ function MainProfile() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-10 bg-gradient-to-br from-indigo-900/20 to-purple-900/20">
+      <section className="py-10 bg-gradient-to-br from-accent/20 to-primary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">
+          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
             Get in Touch
           </h2>
           <div className="max-w-2xl mx-auto">
@@ -227,7 +227,7 @@ function MainProfile() {
                   value={formData.from_name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-500/10 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-white/70"
+                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-white/70"
                 />
               </div>
               <div>
@@ -238,7 +238,7 @@ function MainProfile() {
                   value={formData.from_email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-500/10 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-white/70"
+                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-white/70"
                 />
               </div>
               <div>
@@ -249,13 +249,13 @@ function MainProfile() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-500/10 focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-white/70"
+                  className="w-full px-4 py-3 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/10 focus:ring-2 focus:ring-primary focus:border-transparent text-white placeholder-white/70"
                 ></textarea>
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-3 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 px-6 rounded-lg hover:from-primary/90 hover:to-accent/90 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </button>
@@ -270,7 +270,7 @@ function MainProfile() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-purple-900 to-indigo-900 text-gray-300 py-8">
+      <footer className="bg-gradient-to-r from-primary to-accent text-gray-300 py-8">
         <div className="container mx-auto px-4 text-center">
           <p>© 2024 Álvaro Lucas Castillo Calabacero. All rights reserved.</p>
         </div>
