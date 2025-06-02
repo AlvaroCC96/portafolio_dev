@@ -7,9 +7,9 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        primary: '#e07f3f',
-        secondary: '#0d3745',
-        accent: '#84341c',
+        primary: 'rgb(73, 61, 56)',
+        secondary: 'rgb(221, 177, 102)',
+        accent: 'rgb(148, 148, 164)',
       }
     },
   },
