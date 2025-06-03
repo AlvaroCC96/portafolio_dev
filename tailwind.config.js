@@ -7,9 +7,9 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        primary: '#404040',    // Medium gray
-        secondary: '#1a1a1a',  // Dark gray/almost black
-        accent: '#666666',     // Light-medium gray
+        primary: '#00ff00',    // Matrix green
+        secondary: '#0a0a0a',  // Almost black
+        accent: '#1a1a1a',     // Dark gray
       }
     },
   },
