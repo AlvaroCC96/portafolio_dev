@@ -8,8 +8,8 @@ export default {
       },
       colors: {
         primary: '#00ff00',    // Matrix green
-        secondary: '#0a0a0a',  // Almost black
-        accent: '#1a1a1a',     // Dark gray
+        secondary: '#000000',  // Pure black
+        accent: '#008000',     // Darker green
       }
     },
   },
