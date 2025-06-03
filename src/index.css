@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 body {
-  @apply bg-black font-sans;
+  @apply bg-secondary font-sans;
 }
 
 .tech-carousel .swiper-pagination-bullet {
-  background-color: #00ff00;
+  background-color: #4A4A4A;
   opacity: 0.5;
 }
 
@@ -17,5 +17,5 @@ body {
 }
 
 .Typewriter__cursor {
-  @apply text-green-500;
+  @apply text-primary;
 }
