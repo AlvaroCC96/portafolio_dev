@@ -7,9 +7,9 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       colors: {
-        primary: '#FF6B2B',    // Charizard's vibrant orange flame
-        secondary: '#1A237E',  // Deep blue for contrast
-        accent: '#D84315',     // Darker orange-red for wing highlights
+        primary: '#404040',    // Medium gray
+        secondary: '#1a1a1a',  // Dark gray/almost black
+        accent: '#666666',     // Light-medium gray
       }
     },
   },
