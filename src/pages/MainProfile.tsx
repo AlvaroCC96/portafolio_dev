@@ -114,10 +114,10 @@ function MainProfile() {
               />
             </div>
             <div className="flex-1 text-center md:text-left">
-              <h2 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 About Me
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-white text-lg leading-relaxed mb-8">
                 I am a proactive professional with +4 years of experience in software development, infrastructure management, and technological solutions.
                 My goal is to contribute my knowledge and skills while continuing my professional growth and learning new technologies. 
                 I have experience in web application development, DevOps, and managing collaboration tools like Git and Jira.
@@ -130,7 +130,7 @@ function MainProfile() {
       {/* Technologies Section */}
       <section className="py-10 bg-gradient-to-br from-accent/20 to-primary/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
             Technologies
           </h2>
           <Swiper
@@ -158,7 +158,7 @@ function MainProfile() {
       {/* Experience Section */}
       <section className="py-10 bg-gradient-to-br from-primary/20 to-accent/20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
             Professional Experience
           </h2>
           <div className="space-y-12">

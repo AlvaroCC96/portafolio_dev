@@ -12,11 +12,11 @@ export function TechCard({ icon, title, items }: TechCardProps) {
   return (
     <div className="pt-6 pb-10 mb-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl shadow-lg hover:shadow-primary/20 transition duration-300 h-[300px] border border-primary/10">
       <div className="flex flex-col items-center h-full">
-        <div className="text-primary mb-4">{icon}</div>
-        <h3 className="text-xl font-semibold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+        <div className="text-white mb-4">{icon}</div>
+        <h3 className="text-xl font-semibold mb-4 text-white">
           {title}
         </h3>
-        <ul className="text-gray-300 text-center w-full">
+        <ul className="text-white text-center w-full">
           {displayItems.map((item, index) => (
             <li key={index} className="mb-2 h-6">
               {item}
