@@ -18,12 +18,13 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={staggerContainer(0.12, 0.1)}
+            className="text-center lg:text-left"
           >
             <motion.p variants={fadeUp()} className="font-mono text-sm text-ink-faint mb-3">
               Álvaro Lucas Castillo Calabacero
             </motion.p>
 
-            <motion.div variants={fadeUp()} className="flex items-center gap-3 mb-6 font-mono text-xs uppercase tracking-widest text-accent">
+            <motion.div variants={fadeUp()} className="flex items-center justify-center lg:justify-start gap-3 mb-6 font-mono text-xs uppercase tracking-widest text-accent">
               <span>Backend Engineer</span>
               <span className="text-ink-faint">·</span>
               <span>Cloud &amp; DevOps</span>
@@ -33,18 +34,17 @@ export function Hero() {
 
             <motion.h1
               variants={fadeUp()}
-              className="max-w-3xl text-4xl md:text-6xl font-extrabold leading-[1.1] text-ink text-balance"
+              className="max-w-3xl mx-auto lg:mx-0 text-4xl md:text-6xl font-extrabold leading-[1.1] text-ink text-balance"
             >
               Construyo plataformas backend que corren en producción, a gran escala.
             </motion.h1>
 
-            <motion.p variants={fadeUp()} className="mt-6 max-w-xl text-lg text-ink-muted leading-relaxed">
-              Diseño e implemento servicios y APIs de alto rendimiento —con Go, gRPC y Python— sobre GCP y AWS,
-              incluyendo datos operacionales de bajo tiempo de respuesta y gran volumen sobre Bigtable, con
-              infraestructura y despliegues que no dependen de mí para funcionar.
+            <motion.p variants={fadeUp()} className="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-ink-muted leading-relaxed">
+              Diseño y construyo plataformas cloud, APIs escalables y productos impulsados por IA que resuelven
+              problemas reales.
             </motion.p>
 
-            <motion.div variants={fadeUp()} className="mt-10 flex flex-col sm:flex-row gap-4">
+            <motion.div variants={fadeUp()} className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <Button href="#stack" icon={<ArrowRight size={16} />}>
                 Ver stack
               </Button>
@@ -53,7 +53,7 @@ export function Hero() {
               </Button>
             </motion.div>
 
-            <motion.div variants={fadeUp()} className="mt-10 flex flex-wrap gap-x-6 gap-y-3">
+            <motion.div variants={fadeUp()} className="mt-10 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-3">
               {tickerStack.map((tech) => (
                 <span key={tech} className="font-mono text-xs text-ink-faint">
                   {tech}
