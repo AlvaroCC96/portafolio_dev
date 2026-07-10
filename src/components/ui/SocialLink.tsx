@@ -1,8 +1,8 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 
 interface SocialLinkProps {
   href: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   label: string;
 }
 
@@ -12,7 +12,7 @@ export function SocialLink({ href, icon, label }: SocialLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 text-gray-300 hover:text-primary transition duration-300"
+      className="flex items-center gap-2 text-ink-muted hover:text-accent-hover transition-colors duration-200"
     >
       {icon}
       <span>{label}</span>

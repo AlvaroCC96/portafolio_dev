@@ -1,14 +1,13 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainProfile from './pages/MainProfile';
-import DevMode from './pages/DevMode';
+import Home from './pages/Home';
+import Terminal from './pages/Terminal';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainProfile />} />
-        <Route path="/dev" element={<DevMode />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/terminal" element={<Terminal />} />
       </Routes>
     </Router>
   );
