@@ -36,13 +36,9 @@ export function Hero() {
               variants={fadeUp()}
               className="max-w-3xl mx-auto lg:mx-0 text-4xl md:text-6xl font-extrabold leading-[1.1] text-ink text-balance"
             >
-              Construyo plataformas backend que corren en producción, a gran escala.
-            </motion.h1>
-
-            <motion.p variants={fadeUp()} className="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-ink-muted leading-relaxed">
               Diseño y construyo plataformas cloud, APIs escalables y productos impulsados por IA que resuelven
               problemas reales.
-            </motion.p>
+            </motion.h1>
 
             <motion.div variants={fadeUp()} className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <Button href="#stack" icon={<ArrowRight size={16} />}>
