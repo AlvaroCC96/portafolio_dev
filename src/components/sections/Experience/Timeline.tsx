@@ -10,7 +10,7 @@ export function Timeline() {
           index="02"
           eyebrow="Experiencia"
           title="Trayectoria profesional"
-          description="Más de 4 años construyendo software en producción, desde integraciones gubernamentales hasta plataformas cloud."
+          description="Más de 6 años construyendo software en producción, desde integraciones gubernamentales hasta plataformas cloud."
         />
 
         <div className="max-w-3xl">
